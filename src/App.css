@@ -1,0 +1,176 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+  gap: 5rem;
+  overflow: hidden;
+}
+
+.TaskContainer {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 60vh;
+  padding: 3rem;
+}
+
+.titleTask {
+  color: #fff;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.titleTask::selection {
+  color: rgb(255, 0, 85);
+  background-color: -webkit-linear-gradient(to right, rgb(0, 60, 255), rgb(255, 0, 85));
+  /* background-clip: text;
+  -webkit-background-clip: text; */
+}
+
+.searchInput {
+  width: 60%;
+  height: 3rem;
+  margin: 0 20% 2rem;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.searchInput:focus {
+  width: 70%;
+  margin: 0 15% 2rem;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+ul .taskItem {
+  border: 1px solid rgb(143, 143, 143);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+ul .taskItem:hover {
+  background: rgb(88, 88, 88);
+}
+
+ul .setTaskCheck {
+  border: 2px solid rgb(66, 66, 66);
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: transparent;
+}
+
+.taskItem--notIsCompleted .setTaskCheck:hover {
+  color: rgb(66, 66, 66);
+}
+
+.taskItem--isCompleted .setTaskCheck {
+  color: green;
+  border-color: green;
+}
+
+.deleteTask {
+  position: absolute;
+  right: 1rem;
+  top: -0.5rem;
+  cursor: pointer;
+  color: red;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.formContainer h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+  background: linear-gradient(to right, rgb(0, 60, 255), rgb(255, 0, 85));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.formContainer form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.formContainer form input {
+  width: 90%;
+  height: 3rem;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.formContainer form button {
+  width: 90%;
+  height: 3rem;
+  margin: 0 20% 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(0, 60, 255), rgb(255, 0, 85)) 1;
+  font-weight: bolder;
+  background: linear-gradient(to right, rgb(0, 60, 255), rgb(255, 0, 85));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.formContainer form button:hover {
+  color: #202124;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+}
+
+.emptyTasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #8e8e8f;
+}
+
+.emptyTasks span {
+  font-size: 1.5rem;
+}
